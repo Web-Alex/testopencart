@@ -119,19 +119,27 @@ class ControllerCheckoutConfirm extends Controller {
 				$order_data['firstname'] = $this->session->data['guest']['firstname'];
 				$order_data['lastname'] = $this->session->data['guest']['lastname'];
 				$order_data['email'] = $this->session->data['guest']['email'];
-				$order_data['telephone'] = $this->session->data['guest']['telephone'];
-				$order_data['fax'] = $this->session->data['guest']['fax'];
+				/*
+                $order_data['telephone'] = $this->session->data['guest']['telephone'];
+                */
+            	/*
+                $order_data['fax'] = $this->session->data['guest']['fax'];
+                */
 				$order_data['custom_field'] = $this->session->data['guest']['custom_field'];
 			}
 
 			$order_data['payment_firstname'] = $this->session->data['payment_address']['firstname'];
 			$order_data['payment_lastname'] = $this->session->data['payment_address']['lastname'];
-			$order_data['payment_company'] = $this->session->data['payment_address']['company'];
-			$order_data['payment_address_1'] = $this->session->data['payment_address']['address_1'];
+			/*
+            $order_data['payment_company'] = $this->session->data['payment_address']['company'];
+			*/
+            $order_data['payment_address_1'] = $this->session->data['payment_address']['address_1'];
 			$order_data['payment_address_2'] = $this->session->data['payment_address']['address_2'];
 			$order_data['payment_city'] = $this->session->data['payment_address']['city'];
-			$order_data['payment_postcode'] = $this->session->data['payment_address']['postcode'];
-			$order_data['payment_zone'] = $this->session->data['payment_address']['zone'];
+			/*
+            $order_data['payment_postcode'] = $this->session->data['payment_address']['postcode'];
+			*/
+            $order_data['payment_zone'] = $this->session->data['payment_address']['zone'];
 			$order_data['payment_zone_id'] = $this->session->data['payment_address']['zone_id'];
 			$order_data['payment_country'] = $this->session->data['payment_address']['country'];
 			$order_data['payment_country_id'] = $this->session->data['payment_address']['country_id'];

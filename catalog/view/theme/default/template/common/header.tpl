@@ -45,6 +45,11 @@
     <?php echo $language; ?>
     <div id="top-links" class="nav pull-right">
       <ul class="list-inline">
+      
+      
+
+      
+      
         <li><a href="<?php echo $contact; ?>"><i class="fa fa-phone"></i></a> <span class="hidden-xs hidden-sm hidden-md"><?php echo $telephone; ?></span></li>
         <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span> <span class="caret"></span></a>
           <ul class="dropdown-menu dropdown-menu-right">
@@ -67,11 +72,17 @@
     </div>
   </div>
 </nav>
+
+
 <header>
   <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <div id="logo">
+    <div class="relev row">
+      
+      
+      
+      
+      <div class=" mylogo col-sm-5">
+        <div id="logo" class="mylogo_img">
           <?php if ($logo) { ?>
           <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
           <?php } else { ?>
@@ -79,22 +90,50 @@
           <?php } ?>
         </div>
       </div>
-      <div class="col-sm-5"><?php echo $search; ?>
+      
+      <div class="col-sm-3"></div>
+      <div class="tovarov col-sm-4"><?php echo $cart; ?>
+      
       </div>
-      <div class="col-sm-3"><?php echo $cart; ?></div>
+      
+      
+      
+     <!-- <div  class="poisk col-sm-4"><?php echo $search; ?></div>-->
+      
+      
+      
+      
     </div>
   </div>
 </header>
 <?php if ($categories) { ?>
 <div class="container">
+
   <nav id="menu" class="navbar">
+  
+  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+  
+  <div class"">
+  <a href="http://opencart.ru/index.php?route=common/home" class="glavna">Главная</a>
+  <a href="http://opencart.ru/index.php?route=information/information&information_id=4" class="glavna">О нас</a>
+  <a href="http://opencart.ru/index.php?route=information/information&information_id=6" class="glavna">Доставка</a>
+  </div>
+    
+
+  
+  
+  
     <div class="navbar-header"><span id="category" class="visible-xs"><?php echo $text_category; ?></span>
       <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
     </div>
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
+    
+    
+    
+    <div class=" collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav">
         <?php foreach ($categories as $category) { ?>
         <?php if ($category['children']) { ?>
+        
         <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo $category['name']; ?></a>
           <div class="dropdown-menu">
             <div class="dropdown-inner">
@@ -113,7 +152,13 @@
         <?php } ?>
         <?php } ?>
       </ul>
+      
+     
+      
     </div>
+    
+    </div>
+    <div class="poisk col-xs-12 col-sm-12 col-md-3 col-lg-3 "><?php echo $search; ?></div> 
   </nav>
 </div>
 <?php } ?>

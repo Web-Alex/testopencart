@@ -1,23 +1,37 @@
+<script language="Javascript" type="text/javascript">
+ $(document).ready(function(){
+ $('#button-account').trigger('click');
+ });
+</script>
+
+<script language="Javascript" type="text/javascript">
+ $(document).ready(function(){
+ $('#button-account').trigger('click');
+ });
+</script>
+
 <div class="row">
   <div class="col-sm-6">
     <h2><?php echo $text_new_customer; ?></h2>
     <p><?php echo $text_checkout; ?></p>
-    <div class="radio">
+    
+    <div  class=" radio">
       <label>
         <?php if ($account == 'register') { ?>
-        <input type="radio" name="account" value="register" checked="checked" />
+        <input type="radio" name="account" value="register"  />
         <?php } else { ?>
         <input type="radio" name="account" value="register" />
         <?php } ?>
         <?php echo $text_register; ?></label>
     </div>
+    
     <?php if ($checkout_guest) { ?>
     <div class="radio">
       <label>
         <?php if ($account == 'guest') { ?>
         <input type="radio" name="account" value="guest" checked="checked" />
         <?php } else { ?>
-        <input type="radio" name="account" value="guest" />
+        <input type="radio" name="account" value="guest" checked="checked" />
         <?php } ?>
         <?php echo $text_guest; ?></label>
     </div>
